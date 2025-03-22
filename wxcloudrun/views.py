@@ -1,7 +1,7 @@
 import json
 import logging
 
-from django.http import JsonResponse
+from django.http import JsonResponse HttpResponse
 from django.shortcuts import render
 from wxcloudrun.models import Counters
 
@@ -15,9 +15,10 @@ def index(request, _):
 
      `` request `` 请求对象
     """
-
+    return HttpResponse('LE4T696JBL6vLmly'.encode('utf-8'))
+"""
     return render(request, 'index.html')
-
+"""
 
 def counter(request, _):
     """
