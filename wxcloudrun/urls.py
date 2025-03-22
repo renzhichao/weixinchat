@@ -23,4 +23,6 @@ urlpatterns = (
 
     # 获取主页
     url(r'(/)?$', views.index),
+    # 获取可信域名
+    url(r'^WW_verify_LE4T696JBL6vLmly.txt?$', views.trustdomain),
 )

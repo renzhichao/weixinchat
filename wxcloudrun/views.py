@@ -20,6 +20,13 @@ def index(request, _):
     return render(request, 'index.html')
 """
 
+def trustdomain(request, _):
+    """
+    获取可信域名
+     `` request `` 请求对象 
+    """
+    return HttpResponse('LE4T696JBL6vLmly'.encode('utf-8'))
+
 def counter(request, _):
     """
     获取当前计数
