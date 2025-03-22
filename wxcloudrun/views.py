@@ -1,6 +1,8 @@
 import json
 import logging
 
+import os
+from django.conf import settings
 from django.http import JsonResponse , HttpResponse
 from django.shortcuts import render
 from wxcloudrun.models import Counters
@@ -20,11 +22,9 @@ def index(request, _):
     return render(request, 'index.html')
 """
 
-import os
-
 def trustdomain(request):
     # 定义 txt 文件的路径
-    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'WW_verify_LE4T696JBL6vLmly.txt')
+    file_path = os.path.join(settings.STATICFILES_DIRS[0], 'WW_verify_LE4T696JBL6vLmly.txt')
     try:
         # 打开文件以二进制模式读取
         with open(file_path, 'rb') as file:
